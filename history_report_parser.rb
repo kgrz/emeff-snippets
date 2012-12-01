@@ -10,7 +10,7 @@ require 'json'
 
 # html = Faraday.new(url).get
 # File.open("html.html", "w") {|file| file << html.body}
-html = File.read("html.html")
+html = File.read("history_report.html")
 html_doc = Nokogiri::HTML(html)
 
 fund_houses = html_doc.xpath("//table/tr[@class='label-BGC']")
